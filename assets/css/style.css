@@ -12,9 +12,203 @@
 img{
   width:100%
 }
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 0.75rem;
+}
 
 body{
   font-family: Arial, Helvetica, sans-serif;
   background-color: #000;
   color:#fff;
+}
+
+.landing{
+  background: url("../img/showcase-img.jpg") no-repeat center center/cover  ;
+  position:relative;
+  height: 100vh;
+  width: 100%
+}
+
+.landing::after{
+  content: '';
+  position: absolute;
+  background: rgba( 0 ,0, 0, 0.4);
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  box-shadow: 120px 100px 250px #000 , inset -120px 0  250px #000;
+}
+
+.landing .header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.landing .header img{
+  width: 150px;
+  z-index: 2;
+}
+
+.landing .header a{
+  background-color: var(--primary-color);
+  color:#fff;
+  padding: 8px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: capitalize;
+  z-index: 2;
+}
+
+.landing .landing-content{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+  
+}
+.landing-content h1{
+  font-size: 2.5rem;
+  font-weight: 600;
+  z-index: 2;
+}
+.landing-content h2{
+  font-size: 1.1rem;
+  padding: 0.5rem ;
+  z-index: 2;
+}
+
+.landing-content p{
+  font-size: 1.1rem;
+  line-height: 1.4;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  z-index: 2;
+}
+
+
+.landing-content div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+
+.landing-content div input{
+  padding: 0.8rem;
+  width: 60%;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  height: 100%;
+  z-index: 2;
+}
+
+.landing-content div button{
+  padding: 0.8rem;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-weight: 500;
+  height: 100%;
+  width: 40%;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.landing-content div button:hover ,
+.header a:hover{
+  opacity: 0.9;
+}
+
+.card{
+  width: 100%;
+  border-top: 8px solid var(--secondary-color);
+}
+
+.card .container{
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card .card-content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 6rem 0.5rem;
+  padding-bottom: 2rem;
+}
+
+.card .card-content h2{
+  font-size: 1.5rem;
+}
+
+
+.card .card-content h3{
+  font-size: 1.1rem;
+  padding-top: 1.4rem;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.card .card-animation{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-animation .video-container-1,
+.card-animation .video-container-2{
+  width: 100%;
+  max-width: 530px;
+  min-height: 402px;
+  position: relative;
+  background: url('../img/tv.png') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.card .video-container-1 video{
+  position: relative;
+  max-height: 220px;
+  max-width: 100%;
+  top: -8px;
+  left: -2px;
+  z-index: -2;
+}
+
+
+.card-animation .video-container-2{
+  background: url('../img/device-pile-in.png') no-repeat center center/cover;
+
+}
+
+.card .video-container-2 video{
+  position: relative;
+  max-height: 220px;
+  max-width: 67%;
+  top: -51px;
+  left: -2px;
+  z-index: -2;
 }
