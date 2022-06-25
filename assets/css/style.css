@@ -12,6 +12,8 @@
 img{
   width:100%
 }
+
+
 .container{
   max-width: 1200px;
   margin: 0 auto;
@@ -22,8 +24,10 @@ body{
   font-family: Arial, Helvetica, sans-serif;
   background-color: #000;
   color:#fff;
+  min-width: 300px;
 }
 
+/* landing area */
 .landing{
   background: url("../img/showcase-img.jpg") no-repeat center center/cover  ;
   position:relative;
@@ -74,18 +78,19 @@ body{
   
 }
 .landing-content h1{
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 600;
   z-index: 2;
 }
 .landing-content h2{
-  font-size: 1.1rem;
-  padding: 0.5rem ;
+  font-size: 2rem;
+  margin: 0.75rem 0;
   z-index: 2;
+  font-weight: 400;
 }
 
 .landing-content p{
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1.4;
   margin: 1rem 0;
   padding: 0.5rem;
@@ -93,15 +98,16 @@ body{
 }
 
 
-.landing-content div{
+.email-btn{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90%;
+  width: 100%;
+  max-width: 800px;
 }
 
-.landing-content div input{
-  padding: 0.8rem;
+.email-btn input{
+  padding: 1rem;
   width: 60%;
   font-size: 1rem;
   border: none;
@@ -110,37 +116,42 @@ body{
   z-index: 2;
 }
 
-.landing-content div button{
-  padding: 0.8rem;
+.email-btn button{
+  padding: 1rem;
   border: none;
   outline: none;
-  font-size: 1rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
   background-color: var(--primary-color);
   color: #fff;
   font-weight: 500;
   height: 100%;
   width: 40%;
+  max-width: 300px;
   z-index: 2;
   cursor: pointer;
 }
 
-.landing-content div button:hover ,
+.email-btn button:hover ,
 .header a:hover{
   opacity: 0.9;
 }
 
+
+/* card */
 .card{
   width: 100%;
   border-top: 8px solid var(--secondary-color);
+  
 }
 
 .card .container{
-  min-height: 80vh;
+  /* min-height: 55vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /* margin-bottom: 2rem; */
 }
 
 .card .card-content{
@@ -155,14 +166,14 @@ body{
 }
 
 .card .card-content h2{
-  font-size: 1.5rem;
+  font-size: 2.5rem;
 }
 
 
 .card .card-content h3{
   font-size: 1.1rem;
   padding-top: 1.4rem;
-  line-height: 1.2;
+  line-height: 1.4;
   font-weight: 400;
 }
 
@@ -174,8 +185,7 @@ body{
   align-items: center;
 }
 
-.card-animation .video-container-1,
-.card-animation .video-container-2{
+.card-animation .tv-frame-1{
   width: 100%;
   max-width: 530px;
   min-height: 402px;
@@ -188,8 +198,7 @@ body{
   align-items: center;
 }
 
-
-.card .video-container-1 video{
+.card .tv-frame-1 video{
   position: relative;
   max-height: 220px;
   max-width: 100%;
@@ -198,17 +207,166 @@ body{
   z-index: -2;
 }
 
-
-.card-animation .video-container-2{
-  background: url('../img/device-pile-in.png') no-repeat center center/cover;
-
+.card-animation .tv-frame-2{
+  background: url('../img/device-pile-in.png') no-repeat center center;
+  background-size: 100%;
+  width: 100%;
+  max-width: 550px;
+  min-height: 436px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.card .video-container-2 video{
+
+.card .tv-frame-2 video{
   position: relative;
-  max-height: 220px;
-  max-width: 67%;
-  top: -51px;
-  left: -2px;
-  z-index: -2;
+    max-height: 220px;
+    max-width: 62%;
+    top: -74px;
+    left: 0px;
+    z-index: -2;
+}
+
+/* frequently asked question (faq) */
+
+.faq-question{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 0.75rem;
+  border-top: 8px solid var(--secondary-color)
+}
+.faq-question .container{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 750px;
+}
+.question{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #303030;
+  padding: 0.5rem 2rem;
+} 
+.center{
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 2.5rem;
+}
+.question h3{
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+.question p{
+  font-size: 3rem;
+}
+
+.email-btn-heading{
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 3rem auto 1rem;
+  text-align: center;
+}
+
+@media (max-width:575px) {
+ 
+  .landing-content h1{
+    margin-top: 1.5rem;
+    font-size: 1.75rem;
+  }
+  .landing-content h2{
+    font-weight: 400;
+    font-size: 1rem;
+  }
+
+  .landing-content p{
+    font-size: 1rem;
+  }
+  .email-btn{
+    flex-direction: column;
+  }
+  .email-btn input{
+    width: 80%;
+  }
+
+  .email-btn button{
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    width: 150px;
+  }
+
+  .card .card-content h2{
+    font-size: 1.75rem;
+  }
+
+
+  .card .card-animation{
+    width: 100%;
+  }
+  
+  .card-animation .tv-frame-1,
+  .card-animation .tv-frame-2{
+    width: 100%;
+    max-width: 300px;
+    max-height: 320px;
+    background-size: 100%;
+    
+  }
+  
+  .card-animation .tv-frame-2{
+    background: url('../img/device-pile-in.png') no-repeat center center;
+    background-size: 110%;
+  }
+  
+  .card .tv-frame-1 video{
+    max-height: 220px;
+    max-width: 76%;
+    top: -1px;
+    left: 3px;
+  
+  }
+  .card .tv-frame-2 video{
+    max-height: 220px;
+    max-width: 69%;
+    top: -48px;
+    left: 2px;
+  }
+}
+
+@media only screen and(min-width: 576px)and(max-width:991px){
+  body{
+    display: none;
+  }
+}
+
+@media (min-width:992px){
+  
+  .card .container{
+    min-height: 55vh;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 2rem auto;
+  }
+  
+  .card .card-content{
+    width: 50%;
+    padding: 1rem;
+  }
+  
+  .card .card-animation{
+    width: 60%;
+  }
+   .card-content{
+    order:2;
+    
+  }
+  .card .order{
+    order:2;
+  }
+
 }
